@@ -1,0 +1,78 @@
+<!-- Crie um algoritmo, que ao digitar um número, apareça o antecessor dele! 
+    
+1) Número
+2) subtrair o número de entrada por menos 1
+3) Preencha o campo! 
+4) Mostrar o antecessor digitado no campo
+5)  a. Insira um número
+    b. Subtraia ele por 1 
+    c. Mostrar o resultado do calculo.
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 001</title>
+    <style type="text/css">
+        h2 {
+            text-align: center; 
+            color: white; 
+        }
+
+        body {
+            width: 960px;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .corpo {
+            
+            padding: 30px;
+            background-color: tomato;
+            align-items: center;
+            text-align: center;
+        }
+
+        #res {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="corpo">
+        <h2>
+            Crie um algoritmo, que ao digitar um número, apareça o antecessor dele!
+        </h2>
+
+        <p>Digite um número</p>
+        <input type="number" name="txt" id="txt">
+        <input type="button" value="Ver antecessor" onclick="antecessor()">
+
+        <div id="res">
+
+        </div>
+
+    </div>
+
+    <script>
+        function antecessor() {
+            var txt = window.document.getElementById('txt')
+            var res = window.document.getElementById('res')
+            var n = Number(txt.value)
+            var resultado = n - 1
+            res.innerHTML = ('O antecessor de ' + n + ' é: <b>' + resultado)
+        }
+    </script>
+
+</body>
+
+</html>
+
+

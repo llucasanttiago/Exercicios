@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 007</title>
+    <style>
+        #corpo {
+            width: 500px;
+            margin: 0 auto;
+            margin-top: 150px;
+            text-align: center;
+            background-color: brown;
+            padding: 10px;
+            border-radius: 7px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="corpo">
+        <h3>
+            Faça um algoritmo que leia tres notas de um aluno, calcule e escreva a média final deste aluno. Considere que a média é poderada e que o peso das notas é 2, 3 e 5. Formula para o calculo: MEDIAFINAL=N1*2+N2*3+N3*5/10
+        </h3>
+        
+        <div id="formulario">
+            <p>Insira a primeira nota: </p>
+            <input type="number" name="n1" id="n1">
+
+            <p>Insira a segunda nota: </p>
+            <input type="number" name="n2" id="n2">
+
+            <p>Insira a terceira nota: </p>
+            <input type="number" name="n3" id="n3">
+
+            <p><input type="button" value="Calcular média" onclick="calcular()"></p>
+
+            <div id="res">
+
+            </div>
+        </div>
+    </div> 
+    
+    <script>
+        function calcular() {
+            let n1 = window.document.getElementById('n1')
+            let n2 = window.document.getElementById('n2')
+            let n3 = window.document.getElementById('n3')
+            
+            let n_1 = Number(n1.value)
+            let n_2 = Number(n2.value)
+            let n_3 = Number(n3.value)
+
+            let calculo = n_1*2+n_2*3+n_3*5/10 
+
+            document.getElementById("res").innerHTML = parseFloat(calculo)
+        }
+    </script>
+</body>
+</html>

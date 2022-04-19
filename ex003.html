@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 003</title>
+    <style>
+        body {
+            width: 500px;
+            display: flex;
+            align-items: center;
+            margin: auto;
+            margin-top: 100px;
+        }
+
+        .corpo {
+            
+            padding: 30px;
+            background-color: tomato;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        h4 {
+            color: white;
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="corpo">
+        <h4>
+            Escreva um algoritmo que leia a idade de uma pessoa expressa em anos,
+            meses e dias e escreva a idade dessa pessoa expressa em dias.
+            Considerar ano 365 dias e mês 30 dias.
+        </h4>
+
+        <p>Digite quantos anos você tem:</p>
+        <input type="number" name="dia" id="dia">
+        
+        <p>Digite o seu mês de nascimento:</p>
+        <input type="number" name="mes" id="mes">
+        
+        <p>Digite quantos dias até aqui:</p>
+        <input type="number" name="ano" id="ano">
+
+        <p><input type="button" value="Consultar" onclick="consultar()"></p>
+
+        <div id="res">
+
+        </div>
+    </div>
+
+    <script>
+        function consultar() {
+            var dia = window.document.getElementById('dia')
+            var mes = window.document.getElementById('mes')
+            var ano = window.document.getElementById('ano')
+            var res = window.document.getElementById('res')
+            var dia01 = Number(dia.value)
+            var mes01 = Number(mes.value)
+            var ano01 = Number(ano.value)
+            var calculo = (ano01*365) + (mes01*30) + dia01
+            res.innerHTML = ("Você tem <b>" + calculo + " </b>dias vividos!")
+        }
+    </script>
+</body>
+</html>

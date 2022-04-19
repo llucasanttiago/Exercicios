@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 005</title>
+    <style>
+        .corpo {
+            width: 600px;
+            height: auto;
+            background-color: aquamarine;
+            margin: auto;
+            margin-top: 30px;
+            text-align: center;
+            padding: 25px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="corpo">
+        <h3>
+            Escreva um algoritmo para ler o salário mensal atual de um funcionário e o percentual de reajuste. Calcular e escrever o valor do novo salário.
+        </h3>
+
+        <p>Insira o salario mensal atual do funcionário:</p>
+        <input type="number" name="sAtual" id="sAtual">
+
+        <p>Digite o percentual de reajuste do salário:</p>
+        <input type="number" name="reajuste" id="reajuste">
+
+        <p><input type="button" value="Calcular" onclick="calcular()"></p>
+
+        <div id="res">
+
+        </div>
+    </div>
+
+    <script>
+          
+        function calcular() {
+            var sAtual = window.document.getElementById('sAtual')
+            var reajuste = window.document.getElementById('reajuste')
+            var res = window.document.getElementById('res')
+            
+
+            var sAtual1 = Number(sAtual.value)
+            
+            var reajuste1 = Number(reajuste.value)
+            var resultado = (sAtual1 * reajuste1) / 100 + sAtual1
+            if (sAtual.value == "") {
+                alert("Preencha o campo salário atual")
+                sAtual.focus()
+                return                
+            } else if (reajuste.value == "") {
+                alert("Preencha o campo Reajuste")
+                reajuste.focus()
+                return
+            }            
+            res.innerHTML = ('O novo salário com o reajuste será de: R$ ' +resultado+'.')     
+        }
+
+        
+    </script>
+</body>
+</html>

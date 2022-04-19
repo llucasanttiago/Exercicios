@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 009</title>
+    <style>
+        .corpo {
+            width: 500px;
+            background-color: cadetblue;
+            padding: 15px;
+            margin: 0 auto;
+            margin-top: 30px;
+            border-radius: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="corpo">
+        <h3>
+            Ler um valor e escrever se o mesmo é positivo ou negativo. 
+        </h3>
+
+        <p>Digite um número</p>
+        <input type="number" name="num" id="num">
+
+        <input type="button" value="Consultar" onclick="consultar()"></p>
+
+        <div id="res">
+
+        </div>
+    </div>
+
+    <script>
+        function consultar() {
+            var txtn = window.document.getElementById('num')
+            var res = window.document.getElementById('res')
+            var numv = Number(num.value)
+
+            if (numv >= 0) {
+                res.innerHTML = `O número digitado foi: ${numv} e ele é <b>positivo</b>`
+            } else {
+                res.innerHTML = `O número digitado foi: ${numv} e ele é <b>negativo</b>`
+            }
+        }
+    </script>
+</body>
+</html>

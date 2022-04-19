@@ -1,0 +1,86 @@
+<!-- Escreva um algoritmo para ler as dimensões
+de um retângulo (BASE E ALTURA) e calcule a sua área.
+
+1) Base e altura
+2) Multiplicar a base e altura
+3) Preencha os dois campos.
+4) Mostrar o resultado da área do rentangulo
+5)  a. Insira o valor da base
+    b. Insira o valor da altura
+    c. Multiplicar o valor da Base x Altura
+    d. Mostrar o resultado.
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 002</title>
+    <style type="text/css">
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .container {
+            background-color: tomato;
+            padding: 20px;
+            margin: 0 auto;
+            border-radius: 8px;
+        }
+
+        #res {
+            padding: 20px;
+        }
+
+        img {
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h3>
+            Escreva um algoritmo para ler as dimensões de um retângulo
+            (base e altura) e calcule a sua área!
+        </h3>
+
+        <img src="img/retangulo.png" alt="Retangulo">
+
+        <p>Valor da base:</p>
+            <input type="number" name="base" id="base">
+        
+        <p>Valor da altura:</p>
+            <input type="number" name="altura" id="altura">
+       
+
+        <p><input type="button" value="Calcular" onclick="calcular()"></p>
+
+        <div id="res">
+
+        </div>
+    </div>
+
+    <script>
+        function calcular() {
+            var base = window.document.getElementById('base')
+            var altura = window.document.getElementById('altura')
+            var res = window.document.getElementById('res')
+            var nBase = Number(base.value)
+            var nAltura = Number(altura.value)
+            var resultado = nBase * nAltura
+            res.innerHTML = ('O valor da área do retângulo digitado é: <b>' + resultado + '</b>!')
+        }
+
+    </script>
+</body>
+</html>

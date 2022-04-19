@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 012</title>
+    <style>
+        .container {
+            width: 500px;
+            background-color: aqua;
+            padding: 15px;
+            border-radius: 7px;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>
+            Faça um algoritmo para ler o número da conta do cliente, saldo, débito e crédito. Após calcular e escrever o saldo atual, também testar se o saldo atual for maior ou igual a zero, escrever a mensagem de saldo positivo, ou negativo.
+        </h3>
+        <p>Insira o número da conta </p>
+        <input type="number" name="nConta" id="nConta">
+        <p>Saldo da conta</p>
+        <input type="number" name="sConta" id="sConta">
+        <p>Gastos</p>
+        <input type="number" name="cConta" id="cConta">
+        <p>Entradas</p>
+        <input type="number" name="dConta" id="dConta">
+
+        <p><input type="button" value="Consultar" onclick="calcular()"></p>
+        
+        <div id="res">
+
+        </div>
+    </div>
+
+    <script>
+        function calcular() {
+            var txtnConta = window.document.getElementById('nConta')
+            var txtsConta = window.document.getElementById('sConta')
+            var txtcConta = window.document.getElementById('cConta')
+            var txtdConta = window.document.getElementById('dConta')
+            var res = window.document.getElementById('res')
+            var vsConta = Number(sConta.value)
+            var vcConta = Number(cConta.value)
+            var vdConta = Number(dConta.value)
+
+            var calculo = (vsConta + vdConta) - vcConta 
+
+            if (calculo >= 0) {
+                res.innerHTML = (`Seu saldo é: ${calculo} e ele está <b>POSITIVO</b>`)
+            } else {
+                res.innerHTML = (`Seu saldo é: ${calculo} e ele está <b>NEGATIVO</b>`)
+            }
+
+        }
+    </script>
+</body>
+</html>

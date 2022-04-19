@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 014</title>
+
+<style>
+    html, body {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    main {
+        background-color: cadetblue;
+        border: none;
+        border-radius: 7px;
+        padding: 7px;
+        box-shadow: 5px 3px 2px black;
+    }
+
+    #button:hover {
+        cursor: pointer;    
+    }
+
+</style>
+
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h2>Ler 3 valores e informar o maior</h2>
+            <p>Informe o primeiro valor: <input type="number" name="n1" id="n1"></p>
+            <p>Informe o segundo valor: <input type="number" name="n2" id="n2"></p>
+            <p>Informe o terceiro valor: <input type="number" name="n3" id="n3"></p>
+            <input id="button" type="button" value="Consultar" onclick="verificar()">
+
+            <div id="res">
+
+            </div>
+        </div>
+    </main>
+
+<script>
+    function verificar() {
+        var n1txt = window.document.getElementById('n1')
+        var n2txt = window.document.getElementById('n2')
+        var n3txt = window.document.getElementById('n3')
+        var res = window.document.getElementById('res')
+        var n1Val = Number(n1.value)
+        var n2Val = Number(n2.value)
+        var n3Val = Number(n3.value)
+        
+        
+        if (n1Val > n2Val && n1Val > n3Val) {
+            res.innerHTML = n1Val 
+        } else if (n2Val > n1Val && n2Val > n3Val) {
+            res.innerHTML = n2Val
+        } else if (n3Val > n1Val && n3Val > n2Val) {
+            res.innerHTML = n3Val
+        }    
+    }   
+</script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 004</title>
+    <style>
+        .corpo {
+            background-color: aqua;
+            width: 600px;
+            height: auto;
+            margin: auto;
+            margin-top: 60px;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="corpo">
+        <h3>
+            Escreva um algoritmo para ler o número total de eleitores de um 
+            municipio, o número de votos brancos, nulos e válidos. Calcule
+            e escreva o percentual que cada um representa em relação ao 
+            total de eleitores.
+        </h3>
+
+        <p>Insira o total de eleitores do municipio:</p>
+        <input type="number" name="eleitores" id="eleitores">
+
+        <p>Insira o total de votos em branco:</p>
+        <input type="number" name="brancos" id="branco">
+
+        <p>Insira o total de votos nulos:</p>
+        <input type="number" name="nulos" id="nulos">
+
+        <p>Insira o total de votos válidos:</p>
+        <input type="number" name="validos" id="validos">
+
+        <p><input type="button" value="Consultar" onclick="consultar()"></p>
+
+        <div id="res">
+
+        </div>
+    </div>
+
+    <script>
+        function consultar() {
+            var eleitores = window.document.getElementById('eleitores')
+            var branco = window.document.getElementById('branco')
+            var nulos = window.document.getElementById('nulos')
+            var validos = window.document.getElementById('validos')
+            
+            var eleitores1 = Number(eleitores.value)
+            var branco1 = Number(branco.value)
+            var nulos1 = Number(nulos.value)
+            var validos1 = Number(validos.value)
+            
+            var res = window.document.getElementById('res')
+            
+            var resBranco = branco1/eleitores1*100
+            var resNulos = nulos1/eleitores1*100
+            var resValidos = validos1/eleitores1*100
+            
+
+            res.innerHTML = ('Votos em branco ' + resBranco + '% do total dos eleitores <br>Votos nulos '+resNulos+'% <br>Votos válidos '+resValidos+'%')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 006</title>
+    <style>
+        body {
+            width: 100%;
+            text-align: center;
+        }
+
+        section {
+            margin: 0 auto;
+            background-color: aqua;
+            width: 50%;
+            padding: 10px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>Exercicio 006</h2>
+        <p>
+            Uma revendedora de carros usados paga a seus funcionários vendedores um salário fixo por mês, mais uma comissão fixa por carro vendido e mais 5% sobre o total de vendas efetuadas, escreva um algoritmo que leia o número de carros vendidos, o valor total das vendas, o valor que ele recebe por cada carro e o salario fixo e calcule o salário do mesmo.
+        </p>
+        <p>Insira o número de carros vendidos: </p>
+        <input type="number" id="CarrosVendidos" name="CarrosVendidos">
+
+        <p>Insira o valor total de vendas: </p>
+        <input type="number" id="ValorTotalVendas" name="ValorTotalVendas">
+
+        <p>Insira o valor que o vendedor recebe por cada carro: </p>
+        <input type="number" name="ValorPorCadaCarro" id="ValorPorCadaCarro">
+
+        <p>Insira o salário fixo do vendedor: </p>
+        <input type="number" name="SalarioFixo" id="SalarioFixo">
+
+        <p><input type="button" value="Calcular Salário" onclick="resultado()"></p>
+
+        <div id="res">
+
+        </div>
+    </section>
+    
+    <script>
+        function resultado() {
+            var CarrosVendidos = window.document.getElementById('CarrosVendidos')
+            var ValorTotalVendas = window.document.getElementById('ValorTotalVendas')
+            var ValorPorCadaCarro = window.document.getElementById('ValorPorCadaCarro')
+            var SalarioFixo = window.document.getElementById('SalarioFixo')
+            var res = window.document.getElementById('res')
+            
+            var CarrosVendidos1 = Number(CarrosVendidos.value)
+            var ValorTotalVendas1 = Number(ValorTotalVendas.value)
+            var ValorPorCadaCarro1 = Number(ValorPorCadaCarro.value)
+            var SalarioFixo1 = Number(SalarioFixo.value)
+
+            var calculo = SalarioFixo1 + (ValorPorCadaCarro1*CarrosVendidos1) + (ValorTotalVendas1*5/100)
+            res.innerHTML = calculo
+        }
+    </script>
+</body>
+</html>

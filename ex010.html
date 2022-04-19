@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 010</title>
+    <style>
+        .corpo {
+            width: 500px;
+            background-color: cornflowerblue;
+            margin: 0 auto;
+            margin-top: 50px;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="corpo">
+        <h3>
+            Ler dois valores e escrever qual é o maior valor.
+        </h3>
+
+        <p>Digite o primeiro número</p>
+        <input type="number" name="n1" id="n1">
+        <p>Digite o segundo número</p>
+        <input type="number" name="n2" id="n2">
+        <p><input type="button" value="Consultar" onclick="consultar()"></p>
+
+        <div id="res">
+
+        </div>
+
+        <script>
+            function consultar() {
+                var txtn1 = window.document.getElementById('n1')
+                var txtn2 = window.document.getElementById('n2')
+                var res = window.document.getElementById('res')
+                var vn1 = Number(n1.value)
+                var vn2 = Number(n2.value)
+
+                if (vn1 > vn2) {
+                    res.innerHTML = `O ${vn1} é maior que ${vn2}.`
+                }   else if (vn2 > vn1) {
+                    res.innerHTML = `O ${vn2} é maior que ${vn1}.`
+                }   else if (vn1 == vn2) {
+                    res.innerHTML = `O ${vn1} é igual ao ${vn2}.`
+                } 
+            }
+        </script>
+    </div>
+</body>
+</html>

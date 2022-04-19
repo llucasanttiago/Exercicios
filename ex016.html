@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 016</title>
+</head>
+<body>
+    <h3>Ler 3 valores (n1, n2, n3) cada um representando a medida de um triângulo, e escreva se formam ou não um triangulo. OBS: Para formar um triangulo, o valor de cada lado deve ser menor que a soma dos outros 2 lados</h3>
+    <p>Insira o valor da base: <input type="number" name="num1" id="num1"></p>
+    <p>Insira o valor da primeira extremidade: <input type="number" name="num2" id="num2"></p>
+    <p>Insira o valor da segunda extremidade: <input type="number" name="num3" id="num3"></p>
+    <p><input type="button" value="Verificar" onclick="consultar()"></p>
+    <div id="res">
+
+    </div>
+
+    <script>
+        function consultar() {
+            var num1 = window.document.getElementById('num1')
+            var num2 = window.document.getElementById('num2')
+            var num3 = window.document.getElementById('num3')
+            var res = window.document.getElementById('res')
+            var n1 = Number(num1.value)
+            var n2 = Number(num2.value)
+            var n3 = Number(num3.value)
+
+            var extreminadades = n2+n3 
+
+            if (n1 > extreminadades) {
+                res.innerHTML = `Não da para fazer um triângulo com o número ${n1} e respectivamente os valores ${n2} e ${n3} `
+            } else {
+                res.innerHTML = `Da para fazer um triângulo com o número ${n1} e respectivamente os valores ${n2} e ${n3} `
+            } 
+        }
+    </script>
+</body>
+</html>
